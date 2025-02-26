@@ -34,8 +34,6 @@ async function getMovieRecommendations(options = {}) {
             ...(year && { primary_release_year: year })
         };
 
-        console.log(queryParams);
-
         // Fetch movies from TMDB
         const response = await axios.get(`${TMDB_BASE_URL}/discover/movie`, { params: queryParams });
 
